@@ -1,6 +1,6 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const usuario = sequelize.define('user', {
+  const usuario = sequelize.define('User', {
     id:{
       allowNull: false,
       autoIncrement: true,
@@ -11,9 +11,14 @@ module.exports = (sequelize, DataTypes) => {
     email: DataTypes.STRING,
     password: DataTypes.STRING,
     status: DataTypes.INTEGER,
-  }, {});
+  }, { freezeTableName: true, tableName: 'user' });
+  
   usuario.associate = function(models) {
-    // associations can be defined here
+    usuario.belongsToMany(models.Profile,{ 
+      as: 'Perfis',
+      through: models.UserPerfil,
+      foreignKey:'id'
+    });
   };
   return usuario;
 };

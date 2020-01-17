@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "babel": "babel-node ./src/index.js"
+    "babel": "babel-node ./src/index.js",
+    "build": "babel src sequelize -d dist --source-maps"
   },
   "repository": {
     "type": "git",

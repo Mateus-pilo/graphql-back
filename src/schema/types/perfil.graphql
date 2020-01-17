@@ -1,0 +1,15 @@
+type Perfil {
+    id: Int
+    nome: String!
+    rotulo: String!
+}
+
+input PerfilInput {
+    nome: String
+    rotulo: String
+}
+
+input PerfilFiltro {
+    id: Int
+    nome: String
+}

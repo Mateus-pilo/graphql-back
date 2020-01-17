@@ -6,4 +6,5 @@ module.exports = {
   host: process.env.HOST,
   dialect: "mysql",
   logging: false,
+  freezeTableName: true,
 }
