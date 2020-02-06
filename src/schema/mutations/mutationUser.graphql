@@ -1,0 +1,19 @@
+type Mutation {
+    
+    registerUser(
+        data: UserRegisterInput! 
+    ):User!
+
+    newUser(
+        data: UserInput!
+    ): User!
+
+    removeUser(
+        filter: UserFilter!
+    ): User
+
+    updateUser(
+        filter: UserFilter!
+        data: UserInput!
+    ): User
+}

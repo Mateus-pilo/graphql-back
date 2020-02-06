@@ -1,9 +1,9 @@
 import * as Query from './query';
 import * as Mutation from './mutation';
-import * as Usuario from './type/Usuario';
+import * as User from './type/User';
 
 export {
     Query,
     Mutation,
-    Usuario
+    User
 }

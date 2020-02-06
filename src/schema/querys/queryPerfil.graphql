@@ -1,5 +1,0 @@
-# Pontos de entrada da sua API!
-type Query {
-    perfis: [Perfil]
-    perfil(filtro: PerfilFiltro!): Perfil
-}

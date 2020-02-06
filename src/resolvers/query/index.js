@@ -1,2 +1,2 @@
-export * from './usuario';
-export * from './perfil';
+export * from './user';
+export * from './profile';

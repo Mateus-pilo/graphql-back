@@ -1,6 +1,6 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const usuario = sequelize.define('User', {
+  const user = sequelize.define('User', {
     id:{
       allowNull: false,
       autoIncrement: true,
@@ -13,12 +13,12 @@ module.exports = (sequelize, DataTypes) => {
     status: DataTypes.INTEGER,
   }, { freezeTableName: true, tableName: 'user' });
   
-  usuario.associate = function(models) {
-    usuario.belongsToMany(models.Profile,{ 
+  user.associate = function(models) {
+    user.belongsToMany(models.Profile,{ 
       as: 'Perfis',
-      through: models.UserPerfil,
-      foreignKey:'id'
+      through: models.UserProfile,
+      foreignKey:'user_id'
     });
   };
-  return usuario;
+  return user;
 };

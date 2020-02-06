@@ -1,0 +1,14 @@
+type Mutation {
+    newProfile(
+        data: ProfileInput!
+    ): Profile!
+
+    removeProfile(
+        filter: ProfileFilter!
+    ): Profile
+
+    updateProfile(
+        filter: ProfileFilter!
+        data: ProfileInput!
+    ): Profile
+}

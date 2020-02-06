@@ -1,4 +1,0 @@
-type Query{
-  usuarios: [Usuario]
-  usuario(filtro: UsuarioFiltro!): Usuario
-}
