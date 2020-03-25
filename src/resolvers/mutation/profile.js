@@ -11,7 +11,6 @@ const newProfile = async(_, { data }) => {
     return created;    
 };
 
-
 const removeProfile = async(_, args) => {
   let data = {};
     try {

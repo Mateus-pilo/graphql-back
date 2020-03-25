@@ -3,6 +3,7 @@ type User {
     name: String!
     email: String!
     profiles: [Profile]
+    token: String
 }
 
 input UserInput {
@@ -13,11 +14,10 @@ input UserInput {
 }
 
 input UserRegisterInput {
-    name: String
-    email: String
-    password: String
+    name: String!
+    email: String!
+    password: String!
 }
-
 
 input UserFilter {
     id: Int

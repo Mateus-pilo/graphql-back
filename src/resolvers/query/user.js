@@ -1,9 +1,9 @@
 import models from '../../../sequelize/models';
 
-
-const users = async () => {
+const users = async (obj, args, ctx) => {
     return await models.User.findAll();    
 };
+
 const user = async (_, { filter }) => {
     if(filter.id)
         return await models.User.findByPk(filter.id);
